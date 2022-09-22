@@ -6,7 +6,7 @@ Bookmarked is a user-based platform for book reviews across all genres.
 ### windows w/ xampp
 
 note: dont forget to replace all paths to the location of xampp in your machine
-
+<details>
 1. clone repo to 
 
     ```
@@ -50,3 +50,5 @@ note: dont forget to replace all paths to the location of xampp in your machine
 6. open xampp control panel, start apache and mysql
 
 7. go to bookmarked.test on your browser
+
+</details>
