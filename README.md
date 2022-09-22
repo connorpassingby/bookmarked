@@ -7,18 +7,22 @@ Bookmarked is a user-based platform for book reviews across all genres.
 
 1. clone repo to 
 
-    > xampp/htdocs
+    ```
+    xampp/htdocs
+    ```
 
 2. open your httpd-vhosts.conf file. location is in:
         
-    > xampp/apache/conf/extra
+    ```
+    xampp/apache/conf/extra
+    ```
 
 
 3. add the ff. codeblock to the bottom:
 
-```
+    ```
     <VirtualHost *:80>
     DocumentRoot "D:/Programming/xampp/htdocs"
     ServerName localhost
     </VirtualHost>
-```
+    ```
