@@ -34,7 +34,7 @@ note: dont forget to replace all paths to the location of xampp in your machine
     </VirtualHost>
     ```
 
-4. open your system's hosts file, which is located in:
+4. open your system's hosts file on vscode/any text editor. file is located in:
 
     ```
     C:\Windows\System32\drivers\etc\hosts
