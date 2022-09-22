@@ -10,7 +10,6 @@ Bookmarked is a user-based platform for book reviews across all genres.
     ```
     D:/Programming/xampp/htdocs
     ```
-
     note: replace path to location of your xampp
 
 2. open your httpd-vhosts.conf file. location is in:
