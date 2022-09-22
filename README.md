@@ -5,12 +5,13 @@ Bookmarked is a user-based platform for book reviews across all genres.
 
 ### windows w/ xampp
 
+note: dont forget to replace all paths to the location of xampp in your machine
+
 1. clone repo to 
 
     ```
     D:/Programming/xampp/htdocs
     ```
-    note: replace path to location of your xampp
 
 2. open your httpd-vhosts.conf file. location is in:
         
@@ -18,7 +19,6 @@ Bookmarked is a user-based platform for book reviews across all genres.
     D:/Programming/xampp/apache/conf/extra
     ```
 
-    note: replace path to location of your xampp
 
 3. add the ff. codeblock to the bottom:
 
@@ -33,8 +33,6 @@ Bookmarked is a user-based platform for book reviews across all genres.
         ServerName bookmarked.test
     </VirtualHost>
     ```
-
-    note: replace path to location of your xampp
 
 4. open your system's hosts file, which is located in:
 
