@@ -5,6 +5,8 @@ Bookmarked is a user-based platform for book reviews across all genres.
 
 ### windows w/ xampp
 
+note: replace the paths to where your xampp folder is located
+
 1. clone repo to 
 
     ```
@@ -32,4 +34,19 @@ Bookmarked is a user-based platform for book reviews across all genres.
     </VirtualHost>
     ```
 
-    dont forget to replace the document root to the path of your xampp folder
+4. open your system's hosts file, which is located in:
+
+    ```
+    C:\Windows\System32\drivers\etc\hosts
+    ```
+
+5. at the very bottom, add the following: 
+
+    ```
+    127.0.0.1	localhost
+    127.0.0.1	bookmarked.test
+    ```
+
+6. open xampp control panel, start apache and mysql
+
+7. go to bookmarked.test on your browser
