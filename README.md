@@ -7,6 +7,7 @@ Bookmarked is a user-based platform for book reviews across all genres.
 
 note: dont forget to replace all paths to the location of xampp in your machine
 <details>
+
 1. clone repo to 
 
     ```
