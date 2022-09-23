@@ -45,7 +45,7 @@
                 @auth
                 <li>
                    <span>
-                       Welcome, <span class="font-bold uppercase">{{auth()->user()->name}} </span> !
+                       Welcome, <span class="font-bold uppercase">{{auth()->user()->uname}} </span> !
                    </span>
                 </li>
 
