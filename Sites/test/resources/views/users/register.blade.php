@@ -16,10 +16,145 @@
                             <input
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
-                                name="name" value="{{old('name')}}"
+                                name="uname" value="{{old('uname')}}"
                             />
 
-                          @error('name')
+                          @error('uname')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="fname" class="inline-block text-lg mb-2">
+                                First Name
+                            </label>
+                            <input
+                                type="text"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="fname" value="{{old('fname')}}"
+                            />
+
+                          @error('fname')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="lname" class="inline-block text-lg mb-2">
+                                Last Name
+                            </label>
+                            <input
+                                type="text"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="lname" value="{{old('lname')}}"
+                            />
+
+                          @error('lname')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="minitial" class="inline-block text-lg mb-2">
+                                Middle Initial
+                            </label>
+                            <input
+                                type="text"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="minitial" value="{{old('minitial')}}"
+                            />
+
+                          @error('minitial')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="cluster" class="inline-block text-lg mb-2">
+                                Cluster No.
+                            </label>
+                            <input
+                                type="number"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="cluster" value="{{old('cluster')}}"
+                            />
+
+                          @error('cluster')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="bld" class="inline-block text-lg mb-2">
+                                Building No.
+                            </label>
+                            <input
+                                type="number"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="bld" value="{{old('bld')}}"
+                            />
+
+                          @error('bld')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="flr" class="inline-block text-lg mb-2">
+                                Floor No.
+                            </label>
+                            <input
+                                type="number"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="flr" value="{{old('flr')}}"
+                            />
+
+                          @error('flr')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="unit" class="inline-block text-lg mb-2">
+                                Unit No.
+                            </label>
+                            <input
+                                type="number"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="unit" value="{{old('unit')}}"
+                            />
+
+                          @error('unit')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="contact" class="inline-block text-lg mb-2">
+                                Contact No.
+                            </label>
+                            <input
+                                type="text"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="contact" value="{{old('contact')}}"
+                            />
+
+                          @error('contact')
+                            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                          @enderror
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="birthday" class="inline-block text-lg mb-2">
+                                Birthday <i>(YYYY-MM-DD)</i>
+                            </label>
+                            <input
+                                type="text"
+                                class="border border-gray-200 rounded p-2 w-full"
+                                name="birthday" value="{{old('birthday')}}"
+                            />
+
+                          @error('birthday')
                             <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                           @enderror
                         </div>

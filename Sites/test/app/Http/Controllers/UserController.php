@@ -16,7 +16,16 @@ class UserController extends Controller
     //create new user
     public function store(Request $request) {
         $formFields = $request->validate([
-            'name' => ['required', 'min:3'],
+            'uname' => ['required', 'min:3'],
+            'fname' => ['required'],
+            'lname' => ['required'],
+            'minitial' => ['required', 'min:1'],
+            'cluster' => ['max:2'],
+            'bld' => ['max:2'],
+            'flr' => ['max:2'],
+            'unit' => ['max:2'],
+            'contact' => ['required'],
+            'birthday' => ['required'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => 'required|confirmed|min:6'
         ]);
@@ -24,7 +33,7 @@ class UserController extends Controller
         //encrypt password
         $formFields['password'] = bcrypt($formFields['password']);
 
-        //create user in database
+        //create user 
         $user = User::create($formFields);
 
         auth()->login($user);
