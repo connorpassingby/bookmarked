@@ -25,11 +25,12 @@ Route::get('/', function () {
 });
 
 //fetch single element  
-Route::get('/reviews/{id}', function ($id) {
-    return view('review', 
-    [
-        'review' => Review::find($id)
+Route::get('/reviews/{review}', function (Review $review) {
+
+    return view('review',[
+        'review' =>  $review
     ]);
+    
 });
 
 //show register form
