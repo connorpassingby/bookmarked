@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReviewController;
 use App\Models\Review;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -16,21 +17,10 @@ use App\Http\Controllers\UserController;
 */
 
 //fetch all elements
-Route::get('/', function () {
-    return view('reviews', 
-    [
-        'heading' => 'Latest Reviews',
-        'reviews' => Review::all()
-    ]);
-});
+Route::get('/', [ReviewController::class, 'index']);
 
 //fetch single element  
-Route::get('/reviews/{id}', function ($id) {
-    return view('review', 
-    [
-        'review' => Review::find($id)
-    ]);
-});
+Route::get('/reviews/{review}', [ReviewController::class, 'show']);
 
 //show register form
 Route::get('/register', [UserController::class, 'create']);

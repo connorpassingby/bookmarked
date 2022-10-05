@@ -27,7 +27,7 @@ class UserController extends Controller
             'contact' => ['required'],
             'birthday' => ['required'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => 'required|confirmed|min:6'
+            'password' => 'required|confirmed|min:8'
         ]);
 
         //encrypt password
