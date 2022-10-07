@@ -27,10 +27,10 @@
 
                 <div class="border border-gray-200 w-full my-6"></div>
 
-                <div class="flex flex-col space-y-10 w-full md:w-3/6">
+                <div class="flex flex-col space-y-10 w-full md:w-8/12">
                     <div class="">
                         <h3 class="text-3xl mb-4">
-                            <i class="fa-solid fa-book"></i> Summary
+                            <i class="fa-solid fa-book mr-4"></i> Summary
                         </h3>
                         <div class="text-lg space-y-6 text-justify">
                             {{ $review->summary }}
@@ -39,19 +39,27 @@
 
                     <div class="">
                         <h3 class="text-3xl mb-4">
-                            <i class="fa-solid fa-comment"></i> Review
+                            <i class="fa-solid fa-comment mr-4"></i> Review
                         </h3>
-                        <div class="text-left text-4xl text-main mb-3">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        
-                        <div class="text-lg space-y-6">
-                            {{ $review->description }}
 
-                            <div class="text-right text-4xl text-main mt-4 mb-3">
+                        <div class="flex">
+
+                            <div class="text-left text-4xl text-main self-start">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+
+                            <div class="text-lg space-y-6 grow">
+                                <div class="w-full md:w-11/12 m-auto">
+                                    {{ $review->description }}
+                                </div>
+                            </div>
+
+                            <div class="text-right text-4xl text-main self-end">
                                 <i class="fa-solid fa-quote-right"></i>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
