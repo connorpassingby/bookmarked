@@ -98,6 +98,18 @@
             </div>
 
             <div class="mb-6">
+                <label for="reviewer" class="inline-block text-lg mb-2">Reviewer</label>
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="reviewer"
+                    placeholder="Put your name here!" />
+
+                @error('reviewer')
+                    <p class="text-red-500 text-cs mt-1">
+                        {{ $message }}
+                    </p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
                 <label for="description" class="inline-block text-lg mb-2">
                     Review
                 </label>

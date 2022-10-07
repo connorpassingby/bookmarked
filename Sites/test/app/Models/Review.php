@@ -9,7 +9,7 @@ class Review extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'author', 'media_type', 'genre', 'tags', 'summary', 'description'];
+    protected $fillable = ['title', 'author', 'reviewer', 'media_type', 'genre', 'tags', 'summary', 'description'];
 
     public function scopeFilter($query, array $filters) {
         if($filters['tag'] ?? false ) {
@@ -19,6 +19,7 @@ class Review extends Model
         if($filters['search'] ?? false ) {
             $query->where('title', 'like', '%' . request('search') . '%')
                 ->orWhere('author', 'like', '%' . request('search') . '%')
+                ->orWhere('reviewer', 'like', '%' . request('search') . '%')
                 ->orWhere('media_type', 'like', '%' . request('search') . '%')
                 ->orWhere('genre', 'like', '%' . request('search') . '%')
                 ->orWhere('summary', 'like', '%' . request('search') . '%')
