@@ -2,7 +2,11 @@
 
 <x-card>
     <div class="grid grid-cols-3 gap-7">
-        <img class="hidden w-full mr-6 md:block object-contain m-auto" src="{{ asset('images/BOOKMARKED2black_Vector.png') }}" alt="" />
+        <a class="m-auto" href="/reviews/{{ $review->id }}">
+            <img class="hidden w-full mr-6 md:block object-contain"
+                src="{{ asset('images/BOOKMARKED2black_Vector.png') }}" alt="" />
+        </a>
+
 
         <div class="overflow-auto col-span-2">
             <h3 class="transition-all text-2xl hover:text-main">
