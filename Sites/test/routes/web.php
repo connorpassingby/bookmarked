@@ -3,6 +3,7 @@
 use App\Models\Review;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,21 +17,12 @@ use App\Http\Controllers\UserController;
 */
 
 //fetch all elements
-Route::get('/', function () {
-    return view('reviews', 
-    [
-        'heading' => 'Latest Reviews',
-        'reviews' => Review::all()
-    ]);
-});
+Route::get('/', [ReviewController::class, 'index']);
 
-//fetch single element  
-Route::get('/reviews/{id}', function ($id) {
-    return view('review', 
-    [
-        'review' => Review::find($id)
-    ]);
-});
+//create and post listings
+Route::get('/reviews/create', [ReviewController::class, 'create']);
+Route::post('/reviews', [ReviewController::class, 'store']);
+
 
 //show register form
 Route::get('/register', [UserController::class, 'create']);
@@ -48,5 +40,8 @@ Route::get('/login', [UserController::class, 'login']);
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 
+//Single listings
+//look up route-model binding
+Route::get('/reviews/{review}', [ReviewController::class, 'show']);
 
 
