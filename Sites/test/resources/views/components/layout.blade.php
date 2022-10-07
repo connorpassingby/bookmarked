@@ -42,7 +42,7 @@
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4 ml-7 p-3" >
             <a href="/"
-                ><img class="h-13 w-[130px]" src="images/glassesAndBookmark_Vector.png" alt="" class="logo"
+                ><img class="h-13 w-[130px]" src="{{ asset('images/glassesAndBookmark_Vector.png') }}" alt="" class="logo"
             /></a>
             <ul class="flex space-x-6 mr-6 text-lg">
                 @auth

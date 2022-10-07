@@ -12,18 +12,20 @@
                 <div class="text-xl font-bold mb-4">{{ $review->author }}</div>
 
                 <ul class="flex flex-row flex-wrap items-center">
-                    <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 my-1 text-xs">
+                    <li
+                        class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 my-1 text-xs">
                         <a href="/?search={{ $review->media_type }}">{{ $review->media_type }}</a>
                     </li>
-    
-                    <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 my-1 text-xs">
+
+                    <li
+                        class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 my-1 text-xs">
                         <a href="/?search={{ $review->genre }}">{{ $review->genre }}</a>
                     </li>
-                    
+
                     <x-review-tags :tagsCsv="$review->tags" />
                 </ul>
 
-                <div class="border border-gray-200 w-full my-6"></div> 
+                <div class="border border-gray-200 w-full my-6"></div>
 
                 <div class="flex flex-col space-y-10 w-full md:w-3/6">
                     <div class="">
@@ -34,13 +36,21 @@
                             {{ $review->summary }}
                         </div>
                     </div>
-                    
+
                     <div class="">
                         <h3 class="text-3xl mb-4">
                             <i class="fa-solid fa-comment"></i> Review
                         </h3>
-                        <div class="text-lg space-y-6 text-justify">
+                        <div class="text-left text-4xl text-main mb-3">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        
+                        <div class="text-lg space-y-6">
                             {{ $review->description }}
+
+                            <div class="text-right text-4xl text-main mt-4 mb-3">
+                                <i class="fa-solid fa-quote-right"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
