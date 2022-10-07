@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title');
             $table->string('tags');
             $table->string('author');
+            $table->string('reviewer');
             $table->string('email');
             $table->longText('content');
             $table->string('rating');

@@ -13,7 +13,6 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="images/favicon.ico" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -21,6 +20,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="//unpkg.com/alpinejs" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -28,7 +28,10 @@
                     extend: {
                         colors: {
                             main: "#2B3F81",
-                            hover: "#5D80F2"
+                            hover: "#3C6DD0",
+                            form: "#EEF4FF",
+                            input: "#DCE4F4",
+                            text: "AEAEAE"
                         },
                     },
                 },
@@ -39,10 +42,11 @@
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4 ml-7 p-3" >
             <a href="/"
-                ><img class="h-10 w-26" src="/images/BOOKMARKED_Vector.png" alt="" class="logo"
+                ><img class="h-13 w-[130px]" src="images/glassesAndBookmark_Vector.png" alt="logo" class="logo"
             /></a>
             <ul class="flex space-x-6 mr-6 text-lg">
                 @auth
+
                 <li>
                    <span>
                        Welcome, <span class="font-bold uppercase">{{auth()->user()->uname}} </span> !
@@ -50,10 +54,16 @@
                 </li>
 
                 <li>
+                    <a href="/reviews/manage" class="hover:text-hover"
+                        ><i class="fa-solid fa-pen-to-square"></i></i> Manage posts</a
+                    >
+                </li>
+
+                <li>
                     <form action="/logout" class="inline" method="POST">
                         @csrf 
-                        <button type="submit">
-                            <i class="fa-solid fa-door-closed"></i> Logout
+                        <button type="submit" class="hover:text-hover">
+                        <i class="fa-solid fa-right-from-bracket"></i> Logout
                         </button>
                     </form>
                 </li>
@@ -83,7 +93,7 @@
             <p class="ml-2">Group 3 Software Engineering 1 | Copyright &copy; 2022, All Rights reserved</p>
 
             <a
-                href="create.html"
+                href="/reviews/create"
                 class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
                 >Post a Review</a
             >
