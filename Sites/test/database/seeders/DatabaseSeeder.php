@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        Review::factory(6)->create();
+        Review::factory(3)->create();
 
         Review::create([
             'title' => 'Les Miserables',
