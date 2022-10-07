@@ -5,7 +5,7 @@
         <img class="hidden w-full mr-6 md:block object-contain m-auto" src="{{ asset('images/BOOKMARKED2black_Vector.png') }}" alt="" />
 
         <div class="overflow-auto col-span-2">
-            <h3 class="text-2xl">
+            <h3 class="transition-all text-2xl hover:text-main">
                 <a href="/reviews/{{ $review->id }}">{{ $review->title }}</a>
             </h3>
             <div class="text-xl font-bold mb-4">{{ $review->author }}</div>
