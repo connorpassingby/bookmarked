@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('tags');
             $table->string('author');
+            $table->string('media_type');
+            $table->string('genre');
             $table->string('reviewer');
             $table->string('email');
             $table->longText('content');
