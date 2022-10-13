@@ -87,22 +87,10 @@
                 <label for="summary" class="inline-block text-lg mb-2">
                     Summary
                 </label>
-                <textarea class="border border-gray-200 rounded-[50px] bg-input p-5 w-full" name="summary" rows="10"
+                <textarea class="border border-gray-200 rounded-[50px] bg-input p-5 w-full" name="summary" rows="12"
                     placeholder="Example:&#10 &#10Jean Valjean, a former criminal, gets a second chance at an honest life. Under the alias of 'Monsieur Madeleine', he rises to great heights as the mayor of Montreuil-sur-Mer and even starts a family. However, his past returns to haunt him as his identity as a criminal is uncovered. Les Miserables is the story of one man's chance at redemption and reconciliation with family amidst the turmoil of the French Revolution."></textarea>
 
                 @error('summary')
-                    <p class="text-red-500 text-cs mt-1">
-                        {{ $message }}
-                    </p>
-                @enderror
-            </div>
-
-            <div class="mb-6">
-                <label for="reviewer" class="inline-block text-lg mb-2">Reviewer</label>
-                <input type="text" class="border border-gray-200 rounded-[50px] bg-input px-4 p-2 w-full" name="reviewer"
-                    placeholder="Put your name here!" />
-
-                @error('reviewer')
                     <p class="text-red-500 text-cs mt-1">
                         {{ $message }}
                     </p>

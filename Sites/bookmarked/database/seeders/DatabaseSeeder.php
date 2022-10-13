@@ -20,13 +20,13 @@ class DatabaseSeeder extends Seeder
 
         //for testing:
         $user = User::factory()->create([
-            'uname' => 'test112233',
-            'email' => 'testtest123@test.com'
+            // 'uname' => 'test112233',
+            // 'email' => 'testtest123@test.com'
         ]);
 
         //this user will be the owner of the factory-created posts
             //other users won't be able to edit nor delete this user's posts
-        Review::factory(9)->create([
+        Review::factory(4)->create([
             'user_id' => $user->id
         ]);
         

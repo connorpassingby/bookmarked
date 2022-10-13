@@ -20,7 +20,6 @@ class ReviewFactory extends Factory
             'title' => $this->faker->sentence(),
             'tags' => 'Lorem, ipsum, dolor, sit, amet',
             'author' => $this->faker->name(),
-            'reviewer' => $this->faker->name(),
             'media_type' => $this->faker->word(),
             'genre' => $this->faker->word(),
             'summary' => $this->faker->paragraph(5),

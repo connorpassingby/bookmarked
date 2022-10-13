@@ -60,7 +60,7 @@
 
                         </div>
 
-                        <div class="text-xl mt-3 mb-4">- {{ $review->reviewer }}</div>
+                        <div class="text-xl mt-3 mb-4">- {{ $review->user->fname . ' ' . $review->user->minitial . '. ' . $review->user->lname }}</div>
                     </div>
                 </div>
             </div>

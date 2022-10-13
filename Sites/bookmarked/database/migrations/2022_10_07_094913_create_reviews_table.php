@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('genre');
             $table->string('tags');
             $table->longText('summary');
-            $table->string('reviewer');
             $table->longText('description');
             $table->timestamps();
         });

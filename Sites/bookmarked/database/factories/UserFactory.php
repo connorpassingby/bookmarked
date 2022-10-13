@@ -17,11 +17,14 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $fname = fake()->firstName();
+        $lname = fake()->lastName();
+
         return [
-            'uname' => fake()->name(),
-            'fname' => fake()->name(),
-            'lname' => fake()->name(),
-            'minitial' => fake()->name(),
+            'uname' => $fname . $lname . fake()->randomNumber(3, true),
+            'fname' => $fname,
+            'lname' => $lname,
+            'minitial' => fake()->regexify('[A-Z]{1}'),
             'cluster' => fake()->randomDigit(),
             'bld' => fake()->randomDigit(),
             'flr' => fake()->randomDigit(),
