@@ -19,7 +19,6 @@ class Review extends Model
         if($filters['search'] ?? false ) {
             $query->where('title', 'like', '%' . request('search') . '%')
                 ->orWhere('author', 'like', '%' . request('search') . '%')
-                ->orWhere('reviewer', 'like', '%' . request('search') . '%')
                 ->orWhere('media_type', 'like', '%' . request('search') . '%')
                 ->orWhere('genre', 'like', '%' . request('search') . '%')
                 ->orWhere('summary', 'like', '%' . request('search') . '%')

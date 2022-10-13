@@ -29,7 +29,6 @@ class ReviewController extends Controller
         $formFields = $request->validate([
             'title'=>'required',
             'author' => 'required',
-            'reviewer' => 'required',
             'media_type'=> 'required',
             'genre'=> 'required',
             'tags' => 'required',
@@ -58,7 +57,6 @@ class ReviewController extends Controller
         $formFields = $request->validate([
             'title'=>'required',
             'author' => 'required',
-            'reviewer' => 'required',
             'media_type'=> 'required',
             'genre'=> 'required',
             'tags' => 'required',
