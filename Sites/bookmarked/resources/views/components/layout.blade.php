@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKMARKED</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            main: "#2B3F81",
+                            hover: "#3C6DD0",
+                            form: "#EEF4FF",
+                            input: "#DCE4F4",
+                            text: "AEAEAE"
+                        },
+                    },
+                },
+            };
+        </script>
+        <title>Bookmarked | Your trusted book review site</title>
+    </head>
+    <body class="mb-48">
+        <nav class="flex justify-between items-center mb-4 ml-7 p-3" >
+            <a href="/"
+                ><img class="h-13 w-[130px]" src="{{ asset('images/glassesAndBookmark_Vector.png') }}" alt="" class="logo"
+            /></a>
+            <ul class="flex space-x-6 mr-6 text-lg">
+                @auth
+                <li>
+                   <span>
+                       Welcome, <span class="font-bold uppercase">{{auth()->user()->uname}} </span> !
+                   </span>
+                </li>
+
+                <li>
+                    <a href="/reviews/manage" class="hover:text-hover"
+                        ><i class="fa-solid fa-pen-to-square"></i></i> Manage posts</a
+                    >
+                </li>
+
+                <li>
+                    <form action="/logout" class="inline" method="POST">
+                        @csrf 
+                        <button type="submit" class="hover:text-hover">
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout
+                        </button>
+                    </form>
+                </li>
+                @else
+
+                <li>
+                    <a href="/register" class="hover:text-hover"
+                        ><i class="fa-solid fa-user-plus"></i> Register</a
+                    >
+                </li>
+                <li>
+                    <a href="/login" class="hover:text-hover"
+                        ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        Login</a
+                    >
+                @endauth
+                </li>
+            </ul>
+        </nav>
+         
+    <main>
+         {{$slot}}
+    </main>
+    <footer
+            class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-main text-white h-24 mt-24 opacity-90 md:justify-center"
+        >
+            <p class="ml-2">Group 3 Software Engineering 1 | Copyright &copy; 2022, All Rights reserved</p>
+
+            <a
+                href="/reviews/create"
+                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
+                >Post a Review</a
+            >
+        </footer>
+        <x-flash-message/>
+    </body>
+</html>
