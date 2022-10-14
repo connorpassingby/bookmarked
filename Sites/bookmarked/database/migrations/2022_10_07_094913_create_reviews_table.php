@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('author');
             $table->string('media_type');
             $table->string('genre');
-            $table->string('tags');
+            $table->longText('tags');
             $table->longText('summary');
             $table->longText('description');
             $table->timestamps();

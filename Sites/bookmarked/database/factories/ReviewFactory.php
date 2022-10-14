@@ -18,7 +18,7 @@ class ReviewFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(),
-            'tags' => 'Lorem, ipsum, dolor, sit, amet',
+            'tags' => 'lorem, ipsum, dolor, sit, amet',
             'author' => $this->faker->name(),
             'media_type' => $this->faker->word(),
             'genre' => $this->faker->word(),

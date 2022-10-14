@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
 
         //this user will be the owner of the factory-created posts
             //other users won't be able to edit nor delete this user's posts
-        Review::factory(4)->create([
+        Review::factory(3)->create([
             'user_id' => $user->id
         ]);
 
