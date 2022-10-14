@@ -7,7 +7,7 @@
         <x-card class="p-10">
             <div class="flex flex-col items-center justify-center text-center">
                 
-                <img class="w-48 mr-6 mb-6" src="{{ asset('images/BOOKMARKED2black_Vector.png') }}" alt="" />
+                <img class="w-48 mx-auto mb-6" src="{{ asset('images/BOOKMARKED2black_Vector.png') }}" alt="" />
 
                 <h3 class="text-3xl mb-2">{{ $review->title }}</h3>
                 <div class="text-xl font-bold mb-4">{{ $review->author }}</div>
