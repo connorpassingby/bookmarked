@@ -18,40 +18,40 @@
                 @enderror
             </div>
 
-            <div class="col-span-2 mb-2 ">
-                <label for="fname" class="inline-block text-lg mb-2">
-                </label>
-                <input type="text" class="rounded-[50px] bg-input placeholder-gray-600 text-center p-2 w-full"
-                    name="fname" value="{{ old('fname') }}" placeholder="First Name" />
+            <div class="col-span-5 gap-2 grid grid-cols-5">
+                <div class="col-span-2 mb-2 ">
+                    <label for="fname" class="inline-block text-lg mb-2">
+                    </label>
+                    <input type="text" class="rounded-[50px] bg-input placeholder-gray-600 text-center p-2 w-full"
+                        name="fname" value="{{ old('fname') }}" placeholder="First Name" />
+                    @error('fname')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
 
-                @error('fname')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
+                <div class="mb-2 col-span-1">
+                    <label for="minitial" class="inline-block text-lg mb-2">
+                    </label>
+                    <input type="text" class="rounded-[50px] bg-input placeholder-gray-600 text-center p-2 w-full"
+                        name="minitial" value="{{ old('minitial') }}" placeholder="M.I." />
+                    @error('minitial')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-2 col-span-2">
+                    <label for="lname" class="inline-block text-lg mb-2">
+                    </label>
+                    <input type="text" class="rounded-[50px] bg-input placeholder-gray-600 text-center p-2 w-full"
+                        name="lname" value="{{ old('lname') }}" placeholder="Last Name" />
+
+                    @error('lname')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
             </div>
 
-            <div class="mb-2 col-span-1">
-                <label for="minitial" class="inline-block text-lg mb-2">
-                </label>
-                <input type="text" class="rounded-[50px] bg-input placeholder-gray-600 text-center p-2 w-full"
-                    name="minitial" value="{{ old('minitial') }}" placeholder="M.I." />
-
-                @error('minitial')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-
-            <div class="mb-2 col-span-2">
-                <label for="lname" class="inline-block text-lg mb-2">
-                </label>
-                <input type="text" class="rounded-[50px] bg-input placeholder-gray-600 text-center p-2 w-full"
-                    name="lname" value="{{ old('lname') }}" placeholder="Last Name" />
-
-                @error('lname')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                @enderror
-            </div>
-
-            <div class="col-span-5 flex">
+            <div class="col-span-5 flex gap-2">
                 <div class="mb-2">
                     <label for="cluster" class="inline-block text-lg mb-2">
                     </label>
