@@ -33,6 +33,8 @@ Route::put('/reviews/{review}', [ReviewController::class, 'update'])->middleware
 //delete listings
 Route::delete('/reviews/{review}', [ReviewController::class, 'destroy'])->middleware('auth');
 
+
+
 //show register form
 Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
@@ -47,6 +49,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 //login user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 
 
 //Single listings
